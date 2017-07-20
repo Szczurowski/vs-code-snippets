@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<CodeSnippets  
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+    <CodeSnippet Format="1.0.0">  
+        <Header>  
+            <Title>Test snippet</Title>  
+        </Header>  
+        <Snippet>  
+            <Declarations>
+                <Literal>
+                    <ID>name</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Default>MyClass</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="csharp">  
+                <![CDATA[
+    [TestFixture]
+    public class $name$Tests
+    {
+        private $name$ _sut;
+
+        [SetUp]
+        public void Setup()
+        {
+            _sut = new $name$();
+        }
+
+        [Test]
+        public void Test()
+        {
+            Assert.Fail();
+        }
+    }
+                ]]>  
+            </Code>  
+        </Snippet>  
+    </CodeSnippet>
+</CodeSnippets>
